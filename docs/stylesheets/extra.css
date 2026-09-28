@@ -1,0 +1,55 @@
+/* CMFGEN docs — custom identity layered on top of Material's "teal / amber"
+   named palette (set in mkdocs.yml). Deliberately distinct from Material's
+   default indigo, ReadTheDocs blue, and MESA orange-on-white. Named colors
+   are used (rather than raw hex overrides of Material's internal CSS
+   variables) because Material re-scopes those variables at a CSS
+   specificity a plain [data-md-color-scheme] selector can't beat. */
+
+/* ---------- Typography: rely on system fonts, no external font fetch ---------- */
+body,
+.md-typeset {
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.md-typeset code,
+.md-typeset pre,
+.md-typeset kbd {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+}
+
+/* ---------- Landing page hero ---------- */
+.cmfgen-hero {
+  text-align: center;
+  padding: 2.5rem 1rem 1.5rem;
+}
+
+.cmfgen-hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.cmfgen-hero p.cmfgen-tagline {
+  font-size: 1.1rem;
+  color: var(--md-accent-fg-color);
+  max-width: 40rem;
+  margin: 0 auto 1.5rem;
+  font-weight: 600;
+}
+
+/* ---------- Grid cards: warm hover accent for a bit of visual identity ---------- */
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid.cards > .card {
+  border-radius: 0.4rem;
+  transition: border-color 0.2s, transform 0.15s;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  border-color: var(--md-accent-fg-color);
+  transform: translateY(-2px);
+}
+
+/* Accent bar under section headings */
+.md-typeset h2 {
+  border-bottom: 2px solid var(--md-accent-fg-color);
+  padding-bottom: 0.3rem;
+}

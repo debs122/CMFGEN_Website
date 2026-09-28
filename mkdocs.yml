@@ -1,0 +1,75 @@
+site_name: CMFGEN
+site_description: >-
+  Documentation and tutorial for CMFGEN, a non-LTE radiative transfer and
+  spectral synthesis code for stellar atmospheres and supernovae.
+
+theme:
+  name: material
+  font: false
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+  features:
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - toc.follow
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Installation: installation.md
+      - Running a Model: running-a-model.md
+  - Customizing Models:
+      - Overview: changing-the-model/index.md
+      - Surface Gravity: changing-the-model/surface-gravity.md
+      - Effective Temperature: changing-the-model/effective-temperature.md
+      - Abundances: changing-the-model/abundances.md
+      - Radius: changing-the-model/radius.md
+      - Extent & Meshpoints: changing-the-model/extent-and-meshpoints.md
+      - Wind Parameters: changing-the-model/wind-parameters.md
+      - Useful Commands: changing-the-model/useful-commands.md
+  - Troubleshooting: troubleshooting.md
+  - Outputs & Analysis:
+      - Scientific Outputs: scientific-outputs.md
+      - Analysis Programs:
+          - dispgen: analysis-programs/dispgen.md
+          - rev_rvsig: analysis-programs/rev-rvsig.md
+          - plt_spec: analysis-programs/plt-spec.md
