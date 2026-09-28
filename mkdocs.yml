@@ -2,6 +2,9 @@ site_name: CMFGEN
 site_description: >-
   Documentation and tutorial for CMFGEN, a non-LTE radiative transfer and
   spectral synthesis code for stellar atmospheres and supernovae.
+site_url: https://debs122.github.io/CMFGEN_Website/
+repo_url: https://github.com/debs122/CMFGEN_Website
+repo_name: debs122/CMFGEN_Website
 
 theme:
   name: material
